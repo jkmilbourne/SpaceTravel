@@ -1,0 +1,147 @@
+.body-index {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+}
+
+.main--section__left,
+.main--section__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main--section__right {
+  margin-top: auto;
+}
+
+.hero--super-title {
+  letter-spacing: $letter-spacing-2_7px;
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  font-size: $font-size-16px;
+  font-weight: 400;
+  margin-top: 3rem;
+}
+
+.hero--title {
+  font-size: $font-size-80px;
+  font-weight: 400;
+  color: $clr-100;
+  margin: 0.625rem 0;
+}
+
+.hero--text {
+  width: 20.4375rem;
+  text-align: center;
+  line-height: $line-height-25px;
+  font-size: $font-size-15px;
+}
+
+.explore-a {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background: $clr-100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $clr-900;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: $letter-spacing-1_25px;
+  margin-top: auto;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+.explore-a:hover,
+.explore-a:focus {
+  outline: 55px solid rgba($color: #ffffff, $alpha: 0.1);
+}
+
+// Tablet Styles
+@media (min-width: 768px) {
+  .body-index {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+
+  .main--section__left {
+    max-width: 27.8125rem;
+  }
+
+  .hero--text {
+    width: 100%;
+    padding: 0 0.6rem;
+  }
+
+  .hero--super-title {
+    margin-top: 6.625rem;
+    letter-spacing: $letter-spacing-3_38px;
+    font-size: $font-size-20px;
+    line-height: $line-height-20px;
+  }
+
+  .hero--title {
+    margin-top: 1.5rem;
+    font-size: $font-size-150px;
+    line-height: $line-height-150px;
+  }
+
+  .hero--text {
+    margin-top: 1.5rem;
+  }
+
+  .explore-a {
+    margin-bottom: 5.625rem;
+    width: 15.125rem;
+    height: 15.125rem;
+    font-size: $font-size-32px;
+  }
+
+  .explore-a:hover,
+  .explore-a:focus {
+    outline: 85px solid rgba($color: #ffffff, $alpha: 0.1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-index {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+
+  .main-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main--section__left {
+    width: 28.125rem;
+    margin-bottom: 8.1875rem;
+    margin-top: auto;
+  }
+
+  .hero--super-title {
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: $font-size-28px;
+  }
+
+  .hero--title {
+    margin: 0;
+  }
+  
+  .hero--text {
+    text-align: left;
+    margin-right: auto;
+    padding: 0;
+    margin-top: 1.5rem;
+    font-size: $font-size-18px;
+    line-height: $line-height-32px;
+  }
+
+  .explore-a {
+    margin-bottom: 8.1875rem;
+  }
+
+
+}

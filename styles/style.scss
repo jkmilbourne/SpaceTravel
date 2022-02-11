@@ -1,0 +1,32 @@
+@import "partials/variables";
+@import "partials/css-reset";
+@import "partials/typography";
+@import "partials/header";
+@import "partials/index";
+@import "partials/destination";
+@import "partials/crew";
+@import "partials/technology";
+
+body {
+  background: $clr-900;
+  color: $clr-acccent-400;
+  position: relative;
+  overflow-x: hidden;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 4.53rem);
+
+  @media (min-width: 1200px) {
+    min-height: calc(100vh - 4.53rem - 2.5rem);
+  }
+}
+
+// ////////////////////////////////////
+

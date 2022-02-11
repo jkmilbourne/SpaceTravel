@@ -1,0 +1,181 @@
+.body-technology {
+  background-image: url("../../assets/technology/background-technology-mobile.jpg");
+}
+
+.technology--text {
+  text-align: center;
+}
+
+.technology--title {
+  font-size: $font-size-16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  letter-spacing: $letter-spacing-2_7px;
+  color: $clr-100;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.technology--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.technology--image {
+  width: 100%;
+}
+
+.technology--nav {
+  margin-top: 2.125rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.technology--nav-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $clr-100;
+  border: 1px solid rgba($color: $clr-100, $alpha: 0.25);
+  font-family: $font-family-bellfair;
+  font-size: $font-size-16px;
+}
+
+.technology--nav-link:hover,
+.technology--nav-link:focus {
+  border: 1px solid rgba($color: $clr-100, $alpha: 1);
+}
+
+.technology--nav-link__active {
+  background: $clr-100;
+  color: $clr-900;
+}
+
+.technology--super-title {
+  margin-top: 1.625rem;
+  font-family: $font-family-barlow-condensed;
+  line-height: $line-height-16_8px;
+  letter-spacing: $letter-spacing-2_35px;
+  text-transform: uppercase;
+}
+
+.technology--name {
+  margin-top: 0.5625rem;
+  color: $clr-100;
+  text-transform: uppercase;
+  font-size: $font-size-24px;
+  font-family: $font-family-bellfair;
+}
+
+.technology--description {
+  margin: 1rem 1.5rem 0;
+  text-align: center;
+  font-size: $font-size-15px;
+  line-height: $line-height-25px;
+}
+
+@media (min-width: 768px) {
+  .body-technology {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+  }
+
+  .technology--title {
+    align-self: start;
+    margin-left: 2.40625rem;
+    margin-top: 2.5rem;
+    font-size: $font-size-20px;
+    margin-bottom: 3.75rem;
+  }
+
+  .technology--nav {
+    margin-top: 3.5rem;
+  }
+
+  .technology--nav-link {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+
+  .technology--super-title {
+    margin-top: 2.75rem;
+    letter-spacing: $letter-spacing-2_7px;
+  }
+
+  .technology--name {
+    font-size: $font-size-40px;
+  }
+
+  .technology--description {
+    width: 28.625rem;
+    font-size: $font-size-16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-technology {
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  }
+
+  .main--technology {
+    display: grid;
+    grid-template-rows: 2.5rem 4.75rem 2.125rem 1.625rem 6.9375rem 19rem 7.0625rem 1fr;
+    grid-template-columns: 1.5fr 5rem 1fr 29.375rem 1.5fr 32.1875rem;
+  }
+
+  .technology--title {
+    grid-column: 2 / 5; // hor
+    grid-row: 3;        // vert
+    margin: 0;
+    font-size: $font-size-28px;
+  }
+
+  .technology--image {
+    grid-row: 5 / 8;
+    grid-column: 6;
+  }
+
+  .technology--nav {
+    flex-direction: column;
+    grid-row: 6;
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .technology--nav-link {
+    width: 5rem;
+    height: 5rem;
+    font-size: $font-size-32px;
+  }
+
+  .technology--text {
+    grid-column: 4;
+    grid-row: 6;
+  }
+
+  .technology--super-title {
+    margin-top: 0;
+    font-size: $font-size-16px;
+    text-align: left;
+  }
+
+  .technology--name {
+    font-size: $font-size-56px;
+    text-align: left;
+    line-height: $line-height-56px;
+    margin-top: 0.6875rem;
+  }
+
+  .technology--description {
+    font-size: $font-size-18px;
+    margin-left: 0;
+    margin-top: 1.0625rem;
+    text-align: left;
+    width: 27.75rem;
+    line-height: $line-height-32px;
+  }
+}

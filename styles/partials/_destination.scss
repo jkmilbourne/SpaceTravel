@@ -1,0 +1,226 @@
+.body-destination {
+  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+}
+
+.destination--section__left,
+.destination--section__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.planet--title {
+  font-size: $font-size-16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  letter-spacing: $letter-spacing-2_7px;
+  color: $clr-100;
+  margin-top: 1.5rem;
+}
+
+.planet--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.planet--image {
+  width: 10.625rem;
+  margin-top: 2rem;
+}
+
+.planet--nav {
+  height: 1.75rem;
+  width: 63%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 1.625rem;
+}
+
+.planet--link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  letter-spacing: $letter-spacing-2_35px;
+  color: $clr-acccent-400;
+  cursor: pointer;
+}
+
+.planet--link:hover,
+.planet--link:focus {
+  border-bottom: 3px solid #979797;
+}
+
+.planet--link__active {
+  color: $clr-100;
+  border-bottom: 3px solid $clr-100;
+}
+
+.planet--name {
+  color: $clr-100;
+  font-size: $font-size-56px;
+  text-transform: uppercase;
+}
+
+.planet--description {
+  margin: 0 1.5rem;
+  text-align: center;
+  font-size: $font-size-15px;
+  line-height: $line-height-25px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #383b4b;
+  margin-bottom: 2rem;
+}
+.planet-stats {
+  width: 100%;
+}
+
+.planet-stats--distance__label,
+.planet-stats--travel__label {
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  font-size: $font-size-14px;
+  letter-spacing: $letter-spacing-2_35px;
+  text-align: center;
+}
+
+.planet-stats--distance,
+.planet-stats--travel {
+  margin-top: 12px;
+  text-align: center;
+  font-family: $font-family-bellfair;
+  color: $clr-100;
+  font-size: $font-size-28px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.planet-stats--travel {
+  margin-bottom: 3.625rem;
+}
+
+@media (min-width: 768px) {
+  .body-destination {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
+  }
+
+  .destination--section__left {
+    width: 100%;
+  }
+
+  .planet--title {
+    align-self: start;
+    margin-left: 2.40625rem;
+    margin-top: 2.5rem;
+    font-size: $font-size-20px;
+  }
+
+  .planet--title span {
+    margin-right: 1.1875rem;
+  }
+
+  .planet--image {
+    margin-top: 3.75rem;
+    width: 18.75rem;
+  }
+
+  .planet--nav {
+    width: 17.84375rem;
+    margin-top: 3.3125rem;
+    height: 2.5625rem;
+  }
+
+  .planet--link {
+    font-size: $font-size-16px;
+    letter-spacing: $letter-spacing-2_7px;
+  }
+
+  .planet--name {
+    margin-top: 2rem;
+    font-size: $font-size-80px;
+    line-height: $line-height-92px;
+  }
+
+  .planet--description {
+    margin-top: 0.5rem;
+    width: 35.8125rem;
+    font-size: $font-size-16px;
+    line-height: $line-height-28px;
+    padding-bottom: 3.0625rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .planet-stats {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.6875rem;
+  }
+
+  .planet-stats--groups {
+    width: 13.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-destination {
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+  }
+
+  .main--destination {
+    display: flex;
+    flex-direction: row;
+    gap: 9.8125rem;
+  }
+
+  .planet--title {
+    font-size: $font-size-28px;
+    margin-left: 9.40625rem;
+  }
+
+  .planet--image {
+    align-self: end;
+    margin-top: 6.06525rem;
+    width: 27.8125rem;
+  }
+
+  .destination--section__right {
+    align-self: end;
+    width: 27.8125rem;
+    margin-right: 10.1875rem;
+  }
+
+  .planet--nav {
+    align-self: start;
+  }
+
+  .planet--name {
+    align-self: start;
+    font-size: $font-size-100px;
+    line-height: $line-height-100px;
+  }
+
+  .planet--description {
+    margin: 0;
+    padding: 0;
+    height: 11.375rem;
+    text-align: left;
+    padding-bottom: 3.4375rem;
+    margin-bottom: 1.75rem;
+    width: 27.8125rem;
+    line-height: $line-height-32px;
+  }
+
+  .planet-stats--distance__label,
+  .planet-stats--travel__label,
+  .planet-stats--distance,
+  .planet-stats--travel {
+    text-align: left;
+  }
+
+  .planet-stats--travel {
+    margin-bottom: 7.375rem;
+  }
+}

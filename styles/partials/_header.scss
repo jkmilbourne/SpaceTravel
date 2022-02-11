@@ -1,0 +1,142 @@
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 32%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding: 2.121875rem 1.653125rem 0 2rem;
+  transition: transform 0.3s ease;
+}
+
+@supports (backdrop-filter: blur(81.5485px)) {
+  .main-nav {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+  }
+}
+
+.closed {
+  transform: translateX(100%);
+}
+
+.close-menu {
+  width: 1.193125rem;
+  align-self: flex-end;
+}
+
+.nav-text {
+  margin-top: 2rem;
+  color: $clr-100;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $font-size-16px;
+  font-weight: 400;
+  font-family: $font-family-barlow-condensed;
+  letter-spacing: $letter-spacing-2_7px;
+  line-height: $line-height-19_2px;
+}
+
+.nav-text span {
+  font-weight: 700;
+}
+
+.nav-text__active {
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 6rem;
+    align-items: center;
+    padding: 0 2.875rem 0 2.4375rem;
+  }
+
+  .mobile-nav,
+  .close-menu {
+    display: none;
+  }
+
+  .main-nav {
+    position: unset;
+    transform: translate(0);
+    flex-direction: row;
+    padding: unset;
+    height: 6rem;
+    align-items: center;
+    gap: 2.416666667rem;
+    background: transparent;
+  }
+
+  .nav-text {
+    font-size: $font-size-14px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba($color: $clr-100, $alpha: 0);
+  }
+
+  .nav-text span {
+    display: none;
+  }
+
+  .nav-text:hover,
+  .nav-text:focus {
+    border-bottom: 3px solid rgba($color: $clr-100, $alpha: 0.5);
+  }
+
+  .nav-text__active {
+    font-weight: 400;
+    border-bottom: 3px solid $clr-100;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  header {
+    padding: 0;
+    padding-left: 3.4375rem;
+    transform: translateY(40px);
+  }
+
+  .main-nav {
+    width: 51.875rem;
+    padding: 0 10.3125rem 0 7.6875rem;
+    background: rgba($color: $clr-100, $alpha: 0.04);
+  }
+
+  .nav-text span {
+    display: block;
+    margin-right: 0.75rem;
+  }
+
+  @supports (backdrop-filter: blur(81.5485px)){
+    .main-nav {
+      backdrop-filter: blur(81.5485px)
+    }
+  }
+
+  .logo-line {
+    height: 1px;
+    width: 100%;
+    background: $clr-100;
+    opacity: 0.25;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transform: translateX(3rem);
+    z-index: 1;
+  }
+}

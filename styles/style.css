@@ -1,0 +1,1067 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin and padding font weight */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Bellefair", serif;
+}
+
+h5 {
+  font-family: "Barlow", sans-serif;
+}
+
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 32%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.121875rem 1.653125rem 0 2rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+@supports ((-webkit-backdrop-filter: blur(81.5485px)) or (backdrop-filter: blur(81.5485px))) {
+  .main-nav {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(81.5485px);
+            backdrop-filter: blur(81.5485px);
+  }
+}
+
+.closed {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.close-menu {
+  width: 1.193125rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.nav-text {
+  margin-top: 2rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.16875em;
+  line-height: 1.2rem;
+}
+
+.nav-text span {
+  font-weight: 700;
+}
+
+.nav-text__active {
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 6rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 2.875rem 0 2.4375rem;
+  }
+  .mobile-nav,
+  .close-menu {
+    display: none;
+  }
+  .main-nav {
+    position: unset;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: unset;
+    height: 6rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2.416666667rem;
+    background: transparent;
+  }
+  .nav-text {
+    font-size: 0.875em;
+    margin: 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+  }
+  .nav-text span {
+    display: none;
+  }
+  .nav-text:hover,
+  .nav-text:focus {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+  .nav-text__active {
+    font-weight: 400;
+    border-bottom: 3px solid white;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 0;
+    padding-left: 3.4375rem;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  .main-nav {
+    width: 51.875rem;
+    padding: 0 10.3125rem 0 7.6875rem;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .nav-text span {
+    display: block;
+    margin-right: 0.75rem;
+  }
+  @supports ((-webkit-backdrop-filter: blur(81.5485px)) or (backdrop-filter: blur(81.5485px))) {
+    .main-nav {
+      -webkit-backdrop-filter: blur(81.5485px);
+              backdrop-filter: blur(81.5485px);
+    }
+  }
+  .logo-line {
+    height: 1px;
+    width: 100%;
+    background: white;
+    opacity: 0.25;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+    z-index: 1;
+  }
+}
+
+.body-index {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+}
+
+.main--section__left,
+.main--section__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main--section__right {
+  margin-top: auto;
+}
+
+.hero--super-title {
+  letter-spacing: 0.16875em;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 3rem;
+}
+
+.hero--title {
+  font-size: 5em;
+  font-weight: 400;
+  color: white;
+  margin: 0.625rem 0;
+}
+
+.hero--text {
+  width: 20.4375rem;
+  text-align: center;
+  line-height: 1.5625rem;
+  font-size: 0.9375rem;
+}
+
+.explore-a {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0c0e18;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.07812em;
+  margin-top: auto;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+.explore-a:hover,
+.explore-a:focus {
+  outline: 55px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .body-index {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  .main--section__left {
+    max-width: 27.8125rem;
+  }
+  .hero--text {
+    width: 100%;
+    padding: 0 0.6rem;
+  }
+  .hero--super-title {
+    margin-top: 6.625rem;
+    letter-spacing: 0.21125em;
+    font-size: 1.25em;
+    line-height: 1.25rem;
+  }
+  .hero--title {
+    margin-top: 1.5rem;
+    font-size: 9.375em;
+    line-height: 9.375rem;
+  }
+  .hero--text {
+    margin-top: 1.5rem;
+  }
+  .explore-a {
+    margin-bottom: 5.625rem;
+    width: 15.125rem;
+    height: 15.125rem;
+    font-size: 2em;
+  }
+  .explore-a:hover,
+  .explore-a:focus {
+    outline: 85px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-index {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .main-index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .main--section__left {
+    width: 28.125rem;
+    margin-bottom: 8.1875rem;
+    margin-top: auto;
+  }
+  .hero--super-title {
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.75em;
+  }
+  .hero--title {
+    margin: 0;
+  }
+  .hero--text {
+    text-align: left;
+    margin-right: auto;
+    padding: 0;
+    margin-top: 1.5rem;
+    font-size: 1.125em;
+    line-height: 2rem;
+  }
+  .explore-a {
+    margin-bottom: 8.1875rem;
+  }
+}
+
+.body-destination {
+  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+}
+
+.destination--section__left,
+.destination--section__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.planet--title {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.16875em;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.planet--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.planet--image {
+  width: 10.625rem;
+  margin-top: 2rem;
+}
+
+.planet--nav {
+  height: 1.75rem;
+  width: 63%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-top: 1.625rem;
+}
+
+.planet--link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.15687em;
+  color: #d2d8f9;
+  cursor: pointer;
+}
+
+.planet--link:hover,
+.planet--link:focus {
+  border-bottom: 3px solid #979797;
+}
+
+.planet--link__active {
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+.planet--name {
+  color: white;
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+
+.planet--description {
+  margin: 0 1.5rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #383b4b;
+  margin-bottom: 2rem;
+}
+
+.planet-stats {
+  width: 100%;
+}
+
+.planet-stats--distance__label,
+.planet-stats--travel__label {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875em;
+  letter-spacing: 0.15687em;
+  text-align: center;
+}
+
+.planet-stats--distance,
+.planet-stats--travel {
+  margin-top: 12px;
+  text-align: center;
+  font-family: "Bellefair", serif;
+  color: white;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.planet-stats--travel {
+  margin-bottom: 3.625rem;
+}
+
+@media (min-width: 768px) {
+  .body-destination {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
+  }
+  .destination--section__left {
+    width: 100%;
+  }
+  .planet--title {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-left: 2.40625rem;
+    margin-top: 2.5rem;
+    font-size: 1.25em;
+  }
+  .planet--title span {
+    margin-right: 1.1875rem;
+  }
+  .planet--image {
+    margin-top: 3.75rem;
+    width: 18.75rem;
+  }
+  .planet--nav {
+    width: 17.84375rem;
+    margin-top: 3.3125rem;
+    height: 2.5625rem;
+  }
+  .planet--link {
+    font-size: 1em;
+    letter-spacing: 0.16875em;
+  }
+  .planet--name {
+    margin-top: 2rem;
+    font-size: 5em;
+    line-height: 5.75rem;
+  }
+  .planet--description {
+    margin-top: 0.5rem;
+    width: 35.8125rem;
+    font-size: 1em;
+    line-height: 1.75rem;
+    padding-bottom: 3.0625rem;
+    margin-bottom: 1.75rem;
+  }
+  .planet-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.6875rem;
+  }
+  .planet-stats--groups {
+    width: 13.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-destination {
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+  }
+  .main--destination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 9.8125rem;
+  }
+  .planet--title {
+    font-size: 1.75em;
+    margin-left: 9.40625rem;
+  }
+  .planet--image {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    margin-top: 6.06525rem;
+    width: 27.8125rem;
+  }
+  .destination--section__right {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    width: 27.8125rem;
+    margin-right: 10.1875rem;
+  }
+  .planet--nav {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .planet--name {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    font-size: 6.25em;
+    line-height: 6.25rem;
+  }
+  .planet--description {
+    margin: 0;
+    padding: 0;
+    height: 11.375rem;
+    text-align: left;
+    padding-bottom: 3.4375rem;
+    margin-bottom: 1.75rem;
+    width: 27.8125rem;
+    line-height: 2rem;
+  }
+  .planet-stats--distance__label,
+  .planet-stats--travel__label,
+  .planet-stats--distance,
+  .planet-stats--travel {
+    text-align: left;
+  }
+  .planet-stats--travel {
+    margin-bottom: 7.375rem;
+  }
+}
+
+.body-crew {
+  background-image: url("../../assets/crew/background-crew-mobile.jpg");
+}
+
+.crew--text {
+  text-align: center;
+}
+
+.crew--title {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.16875em;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.crew--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.crew--image--container {
+  width: 85%;
+  height: 223px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #383b4b;
+}
+
+.crew--image--container img {
+  height: 100%;
+}
+
+.crew--nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.crew--link {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.17;
+  cursor: pointer;
+}
+
+.crew--link:hover,
+.crew--link:focus {
+  opacity: 0.5;
+}
+
+.crew--link__active {
+  opacity: 1;
+}
+
+.crew--role {
+  font-size: 1em;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.crew--name {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: "Bellefair", serif;
+}
+
+.crew--bio {
+  margin: 1rem 1.5rem 0;
+  font-size: 0.9375rem;
+  text-align: center;
+  line-height: 1.5625rem;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-crew {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+  }
+  .crew--main {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -ms-grid-columns: 100vw;
+        grid-template-columns: 100vw;
+    -ms-grid-rows: 40px 24px 60px 222px 40px 10px 40px 33.25rem;
+        grid-template-rows: 40px 24px 60px 222px 40px 10px 40px 33.25rem;
+  }
+  .crew--title {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .crew--image--container {
+    -ms-grid-row: 8;
+    grid-row: 8;
+    height: 100%;
+    border: unset;
+    margin-top: auto;
+  }
+  .crew--nav {
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .crew--text {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    height: 100%;
+    width: 458px;
+  }
+  .crew--role {
+    font-size: 1.5em;
+  }
+  .crew--name {
+    font-size: 2.5rem;
+  }
+  .crew--bio {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-crew {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  }
+  .crew--main {
+    -ms-grid-rows: 2.5rem 3.875rem 0.875rem 2.125rem 9.625rem 16.9375rem 7.5rem 0.9375rem;
+        grid-template-rows: 2.5rem 3.875rem 0.875rem 2.125rem 9.625rem 16.9375rem 7.5rem 0.9375rem;
+    -ms-grid-columns: 1.5fr 30.5rem 5.089375rem 38.473125rem 1fr;
+        grid-template-columns: 1.5fr 30.5rem 5.089375rem 38.473125rem 1fr;
+  }
+  .crew--title {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    margin-right: auto;
+    font-size: 1.75em;
+  }
+  .crew--image--container {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 7;
+    grid-row: 3/10;
+  }
+  .crew--nav {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 8;
+    grid-row: 8;
+    margin-right: auto;
+  }
+  .crew--link {
+    height: 0.9375rem;
+    width: 0.9375rem;
+  }
+  .crew--text {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 6;
+    grid-row: 6;
+    width: 30.5rem;
+    text-align: left;
+  }
+  .crew--role {
+    font-size: 2em;
+  }
+  .crew--name {
+    font-size: 3.5em;
+  }
+  .crew--bio {
+    text-align: left;
+    width: 27.75rem;
+    font-size: 1.125em;
+    line-height: 2rem;
+  }
+}
+
+.body-technology {
+  background-image: url("../../assets/technology/background-technology-mobile.jpg");
+}
+
+.technology--text {
+  text-align: center;
+}
+
+.technology--title {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.16875em;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.technology--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.technology--image {
+  width: 100%;
+}
+
+.technology--nav {
+  margin-top: 2.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.technology--nav-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: "Bellefair", serif;
+  font-size: 1em;
+}
+
+.technology--nav-link:hover,
+.technology--nav-link:focus {
+  border: 1px solid white;
+}
+
+.technology--nav-link__active {
+  background: white;
+  color: #0c0e18;
+}
+
+.technology--super-title {
+  margin-top: 1.625rem;
+  font-family: "Barlow Condensed", sans-serif;
+  line-height: 1.05rem;
+  letter-spacing: 0.15687em;
+  text-transform: uppercase;
+}
+
+.technology--name {
+  margin-top: 0.5625rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: "Bellefair", serif;
+}
+
+.technology--description {
+  margin: 1rem 1.5rem 0;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+@media (min-width: 768px) {
+  .body-technology {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+  }
+  .technology--title {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-left: 2.40625rem;
+    margin-top: 2.5rem;
+    font-size: 1.25em;
+    margin-bottom: 3.75rem;
+  }
+  .technology--nav {
+    margin-top: 3.5rem;
+  }
+  .technology--nav-link {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+  .technology--super-title {
+    margin-top: 2.75rem;
+    letter-spacing: 0.16875em;
+  }
+  .technology--name {
+    font-size: 2.5rem;
+  }
+  .technology--description {
+    width: 28.625rem;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-technology {
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  }
+  .main--technology {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2.5rem 4.75rem 2.125rem 1.625rem 6.9375rem 19rem 7.0625rem 1fr;
+        grid-template-rows: 2.5rem 4.75rem 2.125rem 1.625rem 6.9375rem 19rem 7.0625rem 1fr;
+    -ms-grid-columns: 1.5fr 5rem 1fr 29.375rem 1.5fr 32.1875rem;
+        grid-template-columns: 1.5fr 5rem 1fr 29.375rem 1.5fr 32.1875rem;
+  }
+  .technology--title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / 5;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    margin: 0;
+    font-size: 1.75em;
+  }
+  .technology--image {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    grid-row: 5 / 8;
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
+  .technology--nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-row: 6;
+    grid-row: 6;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    margin: 0;
+  }
+  .technology--nav-link {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2em;
+  }
+  .technology--text {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .technology--super-title {
+    margin-top: 0;
+    font-size: 1em;
+    text-align: left;
+  }
+  .technology--name {
+    font-size: 3.5em;
+    text-align: left;
+    line-height: 3.5rem;
+    margin-top: 0.6875rem;
+  }
+  .technology--description {
+    font-size: 1.125em;
+    margin-left: 0;
+    margin-top: 1.0625rem;
+    text-align: left;
+    width: 27.75rem;
+    line-height: 2rem;
+  }
+}
+
+body {
+  background: #0c0e18;
+  color: #d2d8f9;
+  position: relative;
+  overflow-x: hidden;
+  background-size: cover;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 4.53rem);
+}
+
+@media (min-width: 1200px) {
+  main {
+    min-height: calc(100vh - 4.53rem - 2.5rem);
+  }
+}
+/*# sourceMappingURL=style.css.map */

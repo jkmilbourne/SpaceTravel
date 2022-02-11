@@ -1,0 +1,185 @@
+.body-crew {
+  background-image: url("../../assets/crew/background-crew-mobile.jpg");
+}
+
+.crew--text {
+  text-align: center;
+}
+
+.crew--title {
+  font-size: $font-size-16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $font-family-barlow-condensed;
+  letter-spacing: $letter-spacing-2_7px;
+  color: $clr-100;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.crew--title span {
+  opacity: 0.25;
+  margin-right: 1.125rem;
+}
+
+.crew--image--container {
+  width: 85%;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #383b4b;
+}
+
+.crew--image--container img {
+  height: 100%;
+}
+
+.crew--nav {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.crew--link {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: $clr-100;
+  opacity: 0.17;
+  cursor: pointer;
+}
+
+.crew--link:hover,
+.crew--link:focus {
+  opacity: 0.5;
+}
+
+.crew--link__active {
+  opacity: 1;
+}
+
+.crew--role {
+  font-size: $font-size-16px;
+  font-family: $font-family-bellfair;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.crew--name {
+  color: $clr-100;
+  text-transform: uppercase;
+  font-size: $font-size-24px;
+  font-family: $font-family-bellfair;
+}
+
+.crew--bio {
+  margin: 1rem 1.5rem 0;
+  font-size: $font-size-15px;
+  text-align: center;
+  line-height: $line-height-25px;
+  font-weight: 400;
+}
+
+// Tablet Syles
+@media (min-width: 768px) {
+  .body-crew {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+  }
+
+  .crew--main {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 100vw;
+    grid-template-rows: 40px 24px 60px 222px 40px 10px 40px 33.25rem;
+  }
+
+  .crew--title {
+    grid-row: 2;
+  }
+  .crew--image--container {
+    grid-row: 8;
+    height: 100%;
+    border: unset;
+    margin-top: auto;
+  }
+
+  .crew--nav {
+    grid-row: 6;
+  }
+
+  .crew--text {
+    grid-row: 4;
+    height: 100%;
+    width: 458px;
+  }
+
+  .crew--role {
+    font-size: $font-size-24px;
+  }
+
+  .crew--name {
+    font-size: $font-size-40px;
+  }
+
+  .crew--bio {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: $font-size-16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .body-crew {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  }
+
+  .crew--main {
+    grid-template-rows: 2.5rem 3.875rem 0.875rem 2.125rem 9.625rem 16.9375rem 7.5rem 0.9375rem ;
+    grid-template-columns: 1.5fr 30.5rem 5.089375rem 38.473125rem 1fr;
+  }
+
+  .crew--title {
+    grid-row: 4;
+    grid-column: 2;
+    margin-right: auto;
+    font-size: $font-size-28px;
+  }
+
+  .crew--image--container {
+    grid-column: 4;
+    grid-row: 3/10;
+  }
+
+  .crew--nav {
+    grid-column: 2;
+    grid-row: 8;
+    margin-right: auto;
+  }
+
+  .crew--link {
+    height: 0.9375rem;
+    width: 0.9375rem;
+  }
+
+  .crew--text {
+    grid-column: 2;
+    grid-row: 6;
+    width: 30.5rem;
+    text-align: left;
+  }
+
+  .crew--role {
+    font-size: $font-size-32px;
+  }
+
+  .crew--name {
+    font-size: $font-size-56px;
+  }
+
+  .crew--bio {
+    text-align: left;
+    width: 27.75rem;
+    font-size: $font-size-18px;
+    line-height: $line-height-32px;
+  }
+}
